@@ -5,60 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!-- Alternative if you don't want to put JQuery at the bottom of the page -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="login-jquery.js" defer></script> -->
+
 </head>
 
 <body>
 
-    <label for="email">Email</label><br>
-        <input type="text" id="emailBox" name="emailBox"><br>
+    <label for="emailBox">Email</label><br>
+        <input type="email" id="emailBox"><br>
 
-        <label for="password">Password</label><br>
-        <input type="text" id="passwordBox" name="passwordBox">
+        <label for="passwordBox">Password</label><br>
+        <input type="text" id="passwordBox">
+        <br>
 
     <button id="loginButton">LOGIN</button>
     <br>
 
-    <p id="loginResult">SOME TEXT HERE</p>
+    <p id="loginResult"></p>
 
+    <!-- Link to Jquery -->
+    <!-- NB: Place JQuery at the bottom of the body tag -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <!-- <script src="jquery.js"></script> -->
-    <script>
-
-        $(document).ready((event) => {
-
-            $('button#loginButton').click(() => {
-                const emailValue = $('input#emailBox').val();
-                const passwordValue = $('input#passwordBox').val();
-
-                let Message;
-
-                if (emailValue == '' && passwordValue == '') {
-                    Message = 'Please provide your email and/or password';
-                } 
-                else if (String(emailValue).length < 3 && String(passwordValue).length < 3) {
-                    Message = 'Please provide email and password of 3 characters or longer'
-                } 
-                else if (String(emailValue).includes('@')) {
-                    Message = 'Please provide a valid email address';
-                } 
-                else {
-                    Message = 'Logged in successfully as ' + emailValue;
-                }
-                $('p#loginResult').text(Message);
-            })
-
-            event.preventDefault();
-        })
-    </script>
-
+    <script src="login-jquery.js"></script>
 
 </body>
-
-
-
-
-
 
 </html>
