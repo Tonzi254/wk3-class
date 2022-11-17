@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <p id="first">This is my first paragraph</p>
+    <p id="second">This is my second paragraph</p>
+    <p class="third">This is my third paragraph</p>
+    <button id="first">Button</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        jQuery(document).ready(() => {
+//SELECTORS
+
+            // //select html tags
+            // const paragraphs = jQuery('#first');
+            // console.log(paragraphs);
+
+            // //get elements by ID
+            // const paragraphs2 = jQuery('p#first');
+            // console.log(paragraphs2);
+
+            // //get element by class name
+            // const paragraphs3 = jQuery('p.third');
+            // console.log(paragraphs3);
+
+//EVENTS
+            // jQuery('button#first').click(() => {
+            //     console.log('Button Clicked')
+            // });
+
+            jQuery('button#first').dblclick(() => {
+                console.log('Button is Double Clicked')
+            });
+
+            jQuery('button#first').mouseover(() => {
+                console.log('Mouse is over the button')
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
