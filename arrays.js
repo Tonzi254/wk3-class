@@ -1,7 +1,7 @@
 // Arrays
 
 // 1. Definition
-const fruitsArray = ['Mango', 'Apple', 'Banana', 'Watermelon', 'Grape'];
+// const fruitsArray = ['Mango', 'Apple', 'Banana', 'Watermelon', 'Grape'];
 
 // 2. Add items to the array
 // fruitsArray.push('Kiwi');
@@ -28,9 +28,21 @@ const fruitsArray = ['Mango', 'Apple', 'Banana', 'Watermelon', 'Grape'];
 //     }
 // });
 // Method 2
-// fruitsArray.map((abc, index) => {
-//     console.log(abc,'is index',index);
+const fruitsArray = ['Mango', 'Apple', 'Banana', 'Watermelon', 'Grape'];
+// fruitsArray.map(function (value, index) {
+//     console.log(value, index);
+// })
+// fruitsArray.map((value) => {
+//     console.log(value);
 // });
+
+const newSubArray = fruitsArray.slice(1,5);
+console.log(newSubArray, fruitsArray);
+
+const splicedArray = fruitsArray.splice(1,2);
+console.log(splicedArray, fruitsArray);
+
+
 // Method 3
 for (let index = 0; index < fruitsArray.length; index++) {
     const element = fruitsArray[index];

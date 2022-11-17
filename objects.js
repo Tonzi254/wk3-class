@@ -1,3 +1,4 @@
+//Definition
 const playerObject = {'name': 'Ronaldo', 'shirtNumber':7, 'team': 'Manchester United'};
 
 // 1. Retrieve items inside an object
@@ -12,7 +13,7 @@ console.log(playerObject);
 // 4. Loop
 for (const key in playerObject){
     if (key == 'name'){
-        console.log('This is an if')
+        console.log('This is an if clause')
     }
     else{
     console.log(key,'->',playerObject[key]);

@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
         jQuery(document).ready(() => {
-//SELECTORS
+            //SELECTORS
 
             // //select html tags
             // const paragraphs = jQuery('#first');
@@ -29,7 +29,16 @@
             // const paragraphs3 = jQuery('p.third');
             // console.log(paragraphs3);
 
-//EVENTS
+            // Select all elements
+            // const all = jQuery('*')
+            // console.log(all);
+
+            // Select first element from a list of many elements
+            const paragraph1 = jQuery('p:first')
+            console.log(paragraph1)
+
+
+            //EVENTS
             // jQuery('button#first').click(() => {
             //     console.log('Button Clicked')
             // });
@@ -38,9 +47,42 @@
                 console.log('Button is Double Clicked')
             });
 
-            jQuery('button#first').mouseover(() => {
+            jQuery('button#first').mouseenter(() => {
                 console.log('Mouse is over the button')
             });
+
+            jQuery('p.third').click(() => {
+                console.log('Third paragraph clicked');
+            });
+
+            // Dynamic
+            $('button#first').mouseenter(() => {
+                $('p').hide();
+                $('body').addClass('styler');
+            });
+            $('button#first').mouseleave(() => {
+                $('p').show();
+                $('body').removeClass('styler');
+            });
+
+            $('button#first').click(() => {
+                // NB:- This makes sense if you're applying a single change
+                $('p#second').css('font-size', '30cm');
+                // $(this).hide();
+            });
+
+            $('button#first').dblclick(() => {
+                $('body').removeClass('styler');
+                $('p#second').removeClass('xxxx');
+                // $(this).hide();
+            });
+
+            // Chain Multiple Events
+            $('button#first').on({
+                click: () => { },
+                mouseenter: () => { },
+                mouseleave: () => { }
+            })
 
         });
     </script>
